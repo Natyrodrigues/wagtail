@@ -17,7 +17,7 @@ window.comments = (() => {
     return (e.ctrlKey || e.metaKey) && e.altKey && e.keyCode === KEYCODE_M;
   }
 
-  function getContentPath(fieldNode) {
+  window.getContentPath = function getContentPath(fieldNode) {
     // Return the total contentpath for an element as a string, in the form field.streamfield_uid.block...
     if (!fieldNode || fieldNode.closest('[data-contentpath-disabled]')) {
       return '';
